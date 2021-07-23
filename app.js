@@ -34,11 +34,11 @@ app.post("/", function(req, res){
   };
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us6.api.mailchimp.com/3.0/lists/9200d36fde";
+  const url = "https://us6.api.mailchimp.com/3.0/lists/listid";
 
   const options = {
     method: "POST",
-    auth: "harsha:c1cfa0b584c0c9192f226c96ffa247bd-us6"
+    auth: "harsha:apikey"
   }
   const request = https.request(url, options, function(response){
 
@@ -64,8 +64,3 @@ app.listen(process.env.PORT || 3000,function(){
   console.log("server started on port 3000");
 });
 
-//api key
-//c1cfa0b584c0c9192f226c96ffa247bd-us6
-
-//List key
-//9200d36fde
